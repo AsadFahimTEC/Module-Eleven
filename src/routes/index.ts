@@ -24,11 +24,11 @@ addRoutes("POST", "/api/users", async (req, res) => {
     const users = readUsers();
 
     const newUser = {
-        id: Date.now(), // create unique id
+        // id: Date.now(), // create unique id
         ...body,
     };
 
-    users.push(newUser);
+    users?.push(newUser);
 
     writeUsers(users);
 
